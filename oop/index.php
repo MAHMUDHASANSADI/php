@@ -7,13 +7,17 @@
 </head>
 <body>
     <?php
-    $brand= "volvo";
-    $model= "xc90";
-
-    function getCarInfo($brand, $model){
-        return "The car is " . $brand . " " . $model;
-    }
-    echo getCarInfo($brand, $model);
+    require_once "classes/Car.php";
+    $car1 = new Car("volvo", "xc90");
+    //echo $car1->brand;
+    echo $car1->getBrand();
+    echo "<br>";
+    echo $car1->vehicleType;
+    echo "<br>";
+    echo $car1->getCarInfo();
+    echo "<br>";
+    $car1->setBrand("bmw");
+    echo $car1->getBrand();
     ?>
 </body>
 </html>
