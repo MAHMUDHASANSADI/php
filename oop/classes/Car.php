@@ -19,6 +19,19 @@ class Car {
     public function setBrand($brand){
         $this-> brand = $brand;
     }
+
+    public function getModel(){
+        return $this->model;
+    }
+
+    public function setModel($model){
+        $allowedModels = ["sedan", "hatchback", "suv"];
+        if(in_array($model,$allowedModels)){
+            $this->model = $model;
+        } else {
+            echo "Invalid model. Allowed models are: " . implode(", ", $allowedModels);
+        }           
+    }
     
     //method
     public function getCarInfo(){

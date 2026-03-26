@@ -18,6 +18,9 @@
     echo "<br>";
     $car1->setBrand("bmw");
     echo $car1->getBrand();
+    echo "<br>";
+    $car1->setModel("toyota");
+    echo $car1->getModel();
     ?>
 </body>
 </html>
